@@ -2,22 +2,25 @@
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700');
 *, *::before, *::after{
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+::selection {
+  color: #f3f5f6; 
+  background: #ef5350;;
 }
 .readable-hidden{
- position: absolute;
- width: 1px;
- height: 1px;
- overflow: hidden;
- margin: -1px;  
- clip: rect(0,0,0,0);
- visibility: hidden;    
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	margin: -1px;
+	clip: rect(0,0,0,0);
+	visibility: hidden;
 }
 .clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
-
+	content: "";
+	display: block;
+	clear: both;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -44,9 +47,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
 }
@@ -63,98 +63,165 @@ table {
 	border-spacing: 0;
 }
 a{
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 html{
-    font-size: 10px
+  font-size: 10px;
 }
 body{
-    font-family: 'Noto Serif', serif;
-    font-weight: 400; 
-    line-height: 1.15;
-    color: #181818; 
-    background-color: #e9edef;    
-    font-size: 2rem;
-    /* background-image: linear-Gradient(red,green); */
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #181818;
+  background-color: #e9edef;
+  font-size: 2rem;
+  /* background-image: linear-gradient(-45deg,red, green); */
 }
-.container{   
-    width: 1200px;
-    margin: 0 auto;
+/* responsive 이미지 */
+img{
+	max-width: 100%;
+	height: auto;
 }
-/* 헤더  */
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+/* 헤더 */
 .header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 80px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 80px 0;
 }
-/* 메인메뉴 */
+/* 메인 메뉴 */
 .menu{
-    display: flex; 
+	display: flex;
 }
-.menu li{ 
-    font-size: 2.5rem;
-    font-family: 'Spoqa Han Sans',sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-left: 1em;
-    letter-spacing: -1px;
+.menu li{
+	font-size: 2.5rem;
+	font-family: 'Spoqa Han Sans', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-left: 1em;
+	letter-spacing: -1px;
 }
 .menu .is-act{
-    border-bottom: 2px solid #000000;
+	border-bottom: 2px solid #000;
 }
 /* 포트폴리오 섹션 */
-.thumbnail{
-    float: left;
-}
-    
 .product{
-    background-color: #fff;
-    border: 1px solid #aaaaaa;  
-    padding: 50px; 
-    margin: 40px;
-    display: flex;
-    align-items: center; 
-    /* align-items 항목들을 전체에서 중앙정렬 */
+	background-color: #fff;
+	border: 1px solid #aaa;
+	padding: 50px;
+	margin: 40px;
+	display: flex;
+	align-items: center;
 }
-/* 플로트를 활용한 */
+/* 플로트를 활용한 레이아웃 */
 /* .product .wrapper{
-    background-color: yellow;
-    float: left;
+	float: left;
 } */
-/* flex를 활요한 */
+/* flex를 활용한 레이아웃 */
 .thumbnail{
-    margin-right: 50px;
+	margin-right: 50px;
 }
 .product .subject{
-    font-family: 'Spoqa Han Sans', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 3.5rem;
+	font-family: 'Spoqa Han Sans', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 3.5rem;
 }
 .product .summary{
-    margin: 1em 0; 
+	margin: 1em 0;
 }
-.product .more {
-    color: #ef5350;
-    font-size: 1.5rem;  
+.product .more{
+	color: #ef5350;
+	font-size: 1.5rem;
 }
 /* 푸터 */
 .footer{
-    margin: 150px 0 50px;
-    font-size: 1.5rem;
-    display: flex;
-    /* flex는 로우방향으로 배치해줌 */
+	margin: 150px 0 50px;
+	font-size: 1.5rem;
+	display: flex;
 }
 .sns{
-    display: flex;
+	display: flex;
 }
 .sns li::before{
-    content: " · ";
-    margin : 0 5px;
+	content: "·";
+	margin: 0 5px;
 }
 .copyright{
-    margin-left: auto;
+	margin-left: auto;
 }
+/* portfolio 공통 */
+.portfolio{
+	text-align: center;
+	font-size: 3rem;
+}
+.light{
+	background-color: #fff;
+	padding: 1em 2em;
+}
+.dark{
+	background-color: #1a1e23;
+	color: #f3f5f6;
+	padding: 1em 2em;
+}
+.dark .comment{
+	color: #aaa;
+	font-size: 2rem;
+	font-style: italic;
+}
+.portfolio .title{
+	font-size: 5rem;
+	font-family: "Spoqa Han Sans";
+	font-weight: 700;
+	padding: 1em 0;
+	text-transform: uppercase;
+}
+.portfolio .small{
+	font-size: 1.5rem;
+}
+.portfolio .medium{
+	font-size: 4rem;
+}
+.portfolio .wrapper{
+	width: 750px;
+	margin: 0 auto;
+	text-align: left;
+}
+.portfolio p{
+	font-size: 3rem;
+	margin: 1.5em 0;
+	line-height: 2;
+}
+.portfolio .thumbnail{
+	width: 100%;
+	font-size: 1.5rem;
+}
+.portfolio ol{
+	list-style-type: decimal;
+	padding-left: 50px;
+}
+.portfolio li{
+	margin: 1em 0;
+}
+.next-portfolio{
+	padding: 4em 3em;
+	display: flex;
+	justify-content: space-between;
+}
+.next-title{
+	color: #aaa;
+	text-transform: uppercase;
+	font-family: "Spoqa Han Sans";
+	font-weight: 700;
+}
+.next-portfolio a{
+    color: #ef5350;
+    }
+.next-portfolio a::after{
+	content: " →"
